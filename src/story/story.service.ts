@@ -33,11 +33,13 @@ export class StoryService {
         return updatedStory;
     }
 
-    async deleteStory(id: string): Promise<void> {
+    async deleteStory(id: string): Promise<{ deleted: boolean } | string> {
         const result = await this.storyModel.deleteOne({ _id: id }).exec();
         if (result.deletedCount === 0) {
             throw new NotFoundException(`História com o id ${id} not found`);
         }
+
+        return { deleted: true }
     }
 
     async newStoryGPT(email: string, query: string) {
