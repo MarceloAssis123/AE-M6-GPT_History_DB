@@ -17,7 +17,7 @@
 
 - **Criar História:** POST `/story/new` - Cria uma nova história.
 - **Listar Histórias:** GET `/story/all` - Lista todas as histórias.
-- **Detalhes da História:** GET `/story/:id` - Retorna detalhes de uma história específica.
+- **Detalhes da História:** GET `/story/find` - Retorna detalhes de uma história específica.
 - **Atualizar História:** POST `/story/update` - Atualiza uma história existente.
 - **Remover História:** POST `/story/delete` - Remove uma história.
 
